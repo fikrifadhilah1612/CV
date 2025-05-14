@@ -1,0 +1,236 @@
+/* animations.css - File untuk animasi */
+
+/* Animation for fade-in elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for scale elements */
+@keyframes scale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animation for slide-in-left elements */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for slide-in-right elements */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* Animation for profile image */
+.profile-img {
+    animation: scale 1s ease-out;
+}
+
+/* Animation for skill bars */
+.progress-bar {
+    animation: slideInLeft 1.5s ease-out forwards;
+    width: 0 !important;
+}
+
+/* Animation for portfolio items hover */
+.portfolio-item img {
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Animation for timeline items */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation for experience items */
+.experience-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.experience-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation for section titles */
+.section-title {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title::after {
+    animation: slideInLeft 1s ease-out forwards;
+    width: 0;
+}
+
+/* Animation for typing effect on header title */
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    animation: 
+        typing 3.5s steps(40, end),
+        blink 0.75s step-end infinite;
+}
+
+/* Animation for back to top button */
+.back-to-top {
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.back-to-top.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animation for link hover */
+a.animated-link {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+a.animated-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+a.animated-link:hover::after {
+    width: 100%;
+}
+
+/* Animation for form inputs */
+.form-control:focus {
+    transform: translateY(-3px);
+    transition: transform 0.3s ease;
+}
+
+/* Animation for social icons */
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Animation for navlinks */
+.nav-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Bounce animation for buttons */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pulse animation for important elements */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Animation for skill icons */
+.skill-list i {
+    transition: all 0.3s ease;
+}
+
+.skill-list li:hover i {
+    transform: scale(1.2);
+    color: var(--accent-color);
+}
