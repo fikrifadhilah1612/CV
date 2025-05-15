@@ -200,7 +200,7 @@
 
                     <div class="skill-item">
                         <div class="d-flex justify-content-between">
-                            <h5>PHPL</h5>
+                            <h5>PHP</h5>
                             <span>70%</span>
                         </div>
                         <div class="progress">
@@ -353,9 +353,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>IT Security: Defense against the digital dark arts</td>
-                            <td>Google by Coursera</td>
-                            <td>2024</td>
+                            <td>Optimizing Network Performance</td>
+                            <td>ID-Networkers</td>
+                            <td>2025</td>
                             <td><span class="badge bg-success">Valid</span></td>
                         </tr>
                         <tr>
@@ -364,10 +364,10 @@
                             <td>2025</td>
                             <td><span class="badge bg-success">Valid</span></td>
                         </tr>
-                        <tr>
-                            <td>UI/UX Design</td>
-                            <td>Binar Academy</td>
-                            <td>2023</td>
+                        <tr>    
+                            <td>IT Security: Defense against the digital dark arts</td>
+                            <td>Google by Coursera</td>
+                            <td>2024</td>
                             <td><span class="badge bg-success">Valid</span></td>
                         </tr>
                         <tr>
@@ -375,36 +375,55 @@
                             <td>Dilesin Academy</td>
                             <td>2024</td>
                             <td><span class="badge bg-success">Valid</span></td>
-                        </tr>
+                        </tr>  
                         <tr>
-                            <td>Algoritma & Pemrograman Web</td>
+                            <td>UI/UX Design</td>
+                            <td>Binar Academy</td>
+                            <td>2023</td>
+                            <td><span class="badge bg-success">Valid</span></td>
+                        </tr>   
+                        <tr>
+                            <td>Algorithms and Web Programming</td>
                             <td>Fakultas Teknik Universitas Krisnadwipayana</td>
                             <td>2023</td>
                             <td><span class="badge bg-success">Valid</span></td>
                         </tr>
+                        <tr>
+                            <td>Computer and Network Engineering Expertise Competency</td>
+                            <td>Yayasan Rumah Sakit Jakarta</td>
+                            <td>2019</td>
+                            <td><span class="badge bg-success">Valid</span></td>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
 
-    <!-- Galeri Section-->
-     <section id="galeri" class="py-5">
+    <section id="gallery" class="py-5">
         <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Galeri</h2>
-            
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <img src="/img/certificate/1.jpg" alt="Gallery Image 1" class="img-fluid">
-                </div>
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="/img/certificate/2.jpg" alt="Gallery Image 2" class="img-fluid">
-                </div>
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="/img/certificate/3.jpg" alt="Gallery Image 3" class="img-fluid">
-                </div>
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-track" id="galleryTrack">
+                <img src="/img/certificate/1.png" alt="img1" data-title="" data-desc="">
+                <img src="/img/certificate/2.png" alt="img2" data-title="" data-desc="">
+                <img src="/img/certificate/3.png" alt="img3" data-title="" data-desc="">
+                <img src="/img/certificate/4.png" alt="img4" data-title="" data-desc="">
+                <img src="/img/certificate/5.png" alt="img5" data-title="" data-desc="">
+                <img src="/img/certificate/6.png" alt="img6" data-title="" data-desc="">
+                <img src="/img/certificate/7.png" alt="img7" data-title="" data-desc="">
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span id="modalClose" class="modal-close">&times;</span>
+                <img id="modalImage" src="" alt="Zoomed Image" />
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">

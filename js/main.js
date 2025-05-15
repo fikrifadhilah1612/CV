@@ -171,6 +171,82 @@ document.addEventListener('DOMContentLoaded', function() {
         experienceObserver.observe(item);
     });
 
+    
+    const galleryTrack = document.getElementById("galleryTrack");
+    galleryTrack.innerHTML += galleryTrack.innerHTML; // Duplikasi
+    const images = galleryTrack.querySelectorAll("img");
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalClose = document.getElementById("modalClose");
+
+    
+    let resumeTimeout = null;
+
+    // Klik gambar
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+    // Pause animasi
+            galleryTrack.classList.add("paused");
+
+    // Zoom hanya gambar yang diklik
+            images.forEach(i => i.classList.remove("zoomed"));
+            img.classList.add("zoomed");
+            
+
+    // Tampilkan modal
+            modal.style.display = "block";
+            modalImage.src = img.src;
+            modalTitle.textContent = img.dataset.title || "";
+            modalDesc.textContent = img.dataset.desc || "";
+
+    // Auto resume animasi setelah 5 detik
+            clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => {
+                galleryTrack.classList.remove("paused");
+                img.classList.remove("zoomed");
+                modal.style.display = "none";
+            }, 5000);
+        });
+    });
+
+
+   // Tutup modal manual
+    modalClose.addEventListener("click", () => {
+        modal.style.display = "none";
+        galleryTrack.classList.remove("paused");
+        images.forEach(i => i.classList.remove("zoomed"));
+        clearTimeout(resumeTimeout);
+    });
+
+    // Swipe detection (untuk HP)
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    galleryTrack.addEventListener("touchstart", e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    galleryTrack.addEventListener("touchend", e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const deltaX = touchEndX - touchStartX;
+
+        if (Math.abs(deltaX) > swipeThreshold) {
+            galleryTrack.style.animation = "none"; // stop animasi dulu
+            const direction = deltaX > 0 ? 1 : -1;
+            galleryTrack.scrollLeft += direction * 200;
+
+            setTimeout(() => {
+                galleryTrack.style.animation = "";
+            }, 300);
+        }
+    }
+
     // Navbar collapse on click (for mobile)
     const navLinks2 = document.querySelectorAll('.navbar-nav .nav-link');
     const navbarCollapse = document.querySelector('.navbar-collapse');
