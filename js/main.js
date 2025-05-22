@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(resumeTimeout);
     });
 
-    // Swipe detection (untuk HP)
+    // Swipe detection 
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const deltaX = touchEndX - touchStartX;
 
         if (Math.abs(deltaX) > swipeThreshold) {
-            galleryTrack.style.animation = "none"; // stop animasi dulu
+            galleryTrack.style.animation = "none"; // stop animasi
             const direction = deltaX > 0 ? 1 : -1;
             galleryTrack.scrollLeft += direction * 200;
 
