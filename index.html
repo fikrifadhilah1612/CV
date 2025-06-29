@@ -1,537 +1,283 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Fikri Fadhilah</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <title>Portfolio | Ahmad Fikri Fadhilah - ICT Support & System Administrator</title>
+    <meta name="description" content="Portfolio profesional dari [Nama Anda], seorang spesialis ICT Support dan System Administrator dengan pengalaman dalam manajemen jaringan, server, dan keamanan.">
     
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/animations.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    
-    <div class="theme-toggle">
-        <label class="switch">
-            <input type="checkbox" id="darkToggle">
-            <span class="slider"></span>
-            </label>
-    </div>
-
-  <!--   language-select
-    <select id="langselect" class="language-select">
-        <option value="id">ID</option>
-        <option value="en">EN</option>
-    </select> -->
-
-
-    <!-- Header Section -->
-    <header class="bg-primary text-white text-center py-5" id="home">
-        <div class="container">
-
-            <!-- Navigation Profile -->
-            <div class="profile-container" data-aos="zoom-in">
-                <img src="img/DSCF1620-removebg-preview.png" alt="Foto Profil" class="img-fluid rounded-circle profile-img mb-3">
-                <h1 class="display-4 fw-bold">Ahmad Fikri Fadhilah</h1>
-                <p class="lead">ICT Service Operation | Web Developer</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/ahmad-fikri-fadhillah-234a79186/" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://github.com/Fikri1612" target="_blank" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
-                </div>
+    <audio id="background-audio" src="assets/audio/song.mp3" loop></audio>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <header id="main-header">
+        <div id="progress-bar"></div>
+        <nav>
+            <a href="#" class="logo">FIKRI</a>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
             </div>
-        </div>
+            <button id="mute-btn" class="nav-icon-btn">
+                <i class="fas fa-volume-high"></i>
+            </button>
+        </nav>
     </header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="reveal">Hello, I am Ahmad Fikri Fadhilah</h1>
+                <p class="reveal" data-delay="200">I am a <span class="typing-effect"></span></p>
+                <p class="hero-subtitle reveal" data-delay="400">I manage, optimize and secure IT infrastructure to ensure business operations run smoothly and efficientlly.</p>
+                <a href="#contact" class="btn reveal" data-delay="600">Contact Me</a>
             </div>
-        </div>
-    </nav>
+            <div class="hero-scroll-down">
+                <a href="#about"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h2 class="section-title">About Me</h2>
-
-                    <!-- Description -->
-                    <p class="lead">
-                    IT Support with experience in hardware<strong> software and network troubleshooting Skilled in providing </strong> technical support, problem analysis, and ensuring the smooth running of IT systems.
-                    </p>
-                    <p>
-                    Over time, I became more interested and focused on web development. I have been actively learning <mark>HTML</mark>, <mark>CSS</mark>, <mark>JavaScript</mark>, and frameworks such as <mark>Bootstrap</mark> and <mark>Laravel</mark> as a foundation to step into a career as a <mark>Web Developer</mark>.
-                    </p>
-                    <p>
-                    I have good communication skills, able to work individually or in a team, and always solution-oriented. With a strong technical background and high enthusiasm for learning, I am ready to contribute to the development of functional and efficient web applications. This transition is a conscious step that I chose to combine my technical experience with a great interest in the world of modern web development.
-                    </p>
+        <section id="about" class="container">
+            <h2 class="section-title reveal">About Me</h2>
+            <div class="about-content">
+                <div class="about-image reveal">
+                    <img src="assets/images/profile3.jpg" alt="Foto Profil Fikri">
                 </div>
+                <div class="about-text reveal" data-delay="200">
+                    <p>IT Support with experience in hardware software and network troubleshooting Skilled in providing technical support, problem analysis, and ensuring the smooth running of IT systems.</p>
+                    <p>Over time, I became more interested and focused on web development. I have been actively learning HTML, CSS, JavaScript, and frameworks such as Bootstrap and Laravel as a foundation to step into a career as a Web Developer.</p>
+                    <p>I have good communication skills, able to work individually or in a team, and always solution-oriented. With a strong technical background and high enthusiasm for learning, I am ready to contribute to the development of functional and efficient web applications. This transition is a conscious step that I chose to combine my technical experience with a great interest in the world of modern web development.</p>
+                </div>
+            </div>
+        </section>
 
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="personal-info mt-4">
-                        <h3>Personal Information</h3>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Full Name</th>
-                                    <td>Ahmad Fikri Fadhilah</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Age</th>
-                                    <td>24th</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Email</th>
-                                    <td>fikrifadhilah1612@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">WhatsApp</th>
-                                    <td>+62 857 7284 703</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Address</th>
-                                    <td>Bekasi, Indonesia</td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <section id="terminal" class="container">
+            <div class="terminal-window reveal">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <button class="control-btn close"></button>
+                        <button class="control-btn minimize"></button>
+                        <button class="control-btn maximize"></button>
                     </div>
+                    <div class="terminal-title">fikri@portfolio: ~</div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2 class="section-title reveal">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <i class="fas fa-server skill-icon"></i>
+                    <h3>Operating System</h3>
+                    <p>Windows Server 2016/2019/2022, Linux (Ubuntu, CentOS), Active Directory, Group Policy.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="200">
+                    <i class="fas fa-network-wired skill-icon"></i>
+                    <h3>Networking</h3>
+                    <p>TCP/IP, DNS, DHCP, VPN, Firewall (pfSense/FortiGate), Mikrotik, Cisco Switching & Routing.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="400">
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <h3>Virtualization & Cloud</h3>
+                    <p>VMware vSphere, Proxmox VE, Microsoft Azure , AWS.</p>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fas fa-shield-halved skill-icon"></i>
+                    <h3>Security</h3>
+                    <p>Security Hardening, Patch Management, Endpoint Protection, Vulnerability Assessment.</p>
+                </div>
+                 <div class="skill-card reveal" data-delay="200">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h3>Database</h3>
+                    <p>MySQL, SQL Server. Backup, Recovery, and Basic Query.</p>
+                </div>
+                 <div class="skill-card reveal" data-delay="400">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>Scripting</h3>
+                    <p>Bash, PowerShell. Automation of routine administrative tasks.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Education</h2>
+        <section id="experience" class="container">
+            <h2 class="section-title reveal">Experience</h2>
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Oct - Present</div>
                     <div class="timeline-content">
-                        <h3>S1 Informatics</h3>
-                        <h4>University Cyber Asian</h4>
-                        <p class="timeline-date">2024 - Now</p>
-                        <p>Focus Web development and Applications</p>
+                        <div class="timeline-header">
+                            <img src="assets/images/company-logo.png" alt="Logo PT. East West Seed Indonesia" class="company-logo">
+                            <div>
+                                <h3>ICT Service Operations</h3>
+                                <span>PT. East West Seed Indonesia</span>
+                            </div>
+                        </div>
+                        <p>Responsible for managing ICT service operations, including installation, configuration, and maintenance of IT infrastructure; providing technical support and troubleshooting for hardware, software, and networks; ensuring compliance with SLAs and resolving incidents on a priority basis; monitoring system performance to maintain reliability; compiling technical documentation and incident reports; and supporting system security and implementation of ICT development projects.</p>
+                        <a href="https://www.panahmerah.id" target="_blank" class="btn-icon">
+                            Visit Website <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2024 - Sept 2024</div>
                     <div class="timeline-content">
-                        <h3>SMK Binakarya Mandiri 2</h3>
-                        <h4>Technical Computer Networking</h4>
-                        <p class="timeline-date">2016 - 2019</p>
-                        <p>Active in the Mikrotik community and focused on developing network topologies</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Skills</h2>
-            
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <h3 class="mb-4">Technical Skills</h3>
-                    <div class="skill-item">
-                        <div class="d-flex justify-content-between">
-                            <h5>IT Technical Support</h5>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="d-flex justify-content-between">
-                            <h5>Computer Networking</h5>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="d-flex justify-content-between">
-                            <h5>Microsoft Dynamics365</h5>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="d-flex justify-content-between">
-                            <h5>Azzure Active Directory</h5>
-                            <span>75%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="d-flex justify-content-between">
-                            <h5>MySQL</h5>
-                            <span>70%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 70%"></div>
-                        </div>
-                    </div>
-                
-
-                    <div class="skill-item">
-                        <div class="d-flex justify-content-between">
-                            <h5>HTML, CSS</h5>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 80%"></div>
-                        </div>
-                    </div>
-                
-
-                    <div class="skill-item">
-                        <div class="d-flex justify-content-between">
-                            <h5>PHP</h5>
-                            <span>70%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 70%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="col-md-6" data-aos="fade-left">
-                    <h3 class="mb-4">Soft Skills</h3>
-                    <ul class="skill-list list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary"></i> Effective Communication</li>
-                        <li><i class="fas fa-check-circle text-primary"></i> Team Work</li>
-                        <li><i class="fas fa-check-circle text-primary"></i> Time Management</li>
-                        <li><i class="fas fa-check-circle text-primary"></i> Traubleshooting</li>
-                        <li><i class="fas fa-check-circle text-primary"></i> Creativity</li>
-                        <li><i class="fas fa-check-circle text-primary"></i> Adaptability</li>
-                    </ul>
-                    
-                    <h3 class="mb-4 mt-5">Tools & Software</h3>
-                    <ul class="skill-list list-unstyled">
-                        <li><i class="fas fa-laptop-code text-primary"></i> VS Code</li>
-                        <li><i class="fas fa-paint-brush text-primary"></i> Adobe XD</li>
-                        <li><i class="fas fa-pen-fancy text-primary"></i> Figma</li>
-                        <li><i class="fas fa-terminal text-primary"></i> Git & GitHub</li>
-                        <li><i class="fas fa-database text-primary"></i> MySQL</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Work Experience</h2>
-            
-            <div class="experience-timeline">
-                <div class="experience-item" data-aos="fade-up">
-                    <div class="experience-content">
-                        
-                            <h3> ICT Service Operation</h3>
-                            <h4 class="mb-0">PT East West Seed Indonesia</h4>
-                        <div class="d-flex justify-content-between align-items-center flex-wrap"></div> 
-                            <a href="https://panahmerah.id/id" target="_blank" class="text-primary">View Website</a>
-                        </div>
-                            <p class="experience-date">Oct 2024 - Now</p>
-                            <ul class="experience-list">
-                                <li>Manage and Monitor ICT service operation to maintain system availability</li>
-                                <li>Provide technical support and traubleshooting for hardware, software, and networks</li>
-                                <li>Installing, Configuring and maintaining IT infrastructure</li>
-                                <li>Ensure SLA compliance and resolve incidents on priority</li>
-                                <li>Monitor system performance, identify problems, and improve reliability</li>
-                                <li>Create technical documentation and incident reports</li>
-                                <li>Support the implementation of system security and ICT development projects</li>
-                            </ul>
-                        
-                </div>
-                
-                <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="experience-content">
-                        <h3>IT Staff</h3>
-                        <h4>Tarumajaya Hospitals</h4>
-                        <div class="d-flex justify-content-between align-items-center flex-wrap"></div> 
-                            <a href="https://tarumajayahospital.com/" target="_blank" class="text-primary">View Website</a>
-                        </div>
-                        <p class="experience-date">Jan 2024 - Aug 2024</p>
-                        <ul class="experience-list">
-                            <li>Ensure that all computer device and applications can be used properly and are connect to the network</li>
-                            <li>Ensure that supporting system such as printers and scanners can operate properly</li>
-                            <li>Repair/replace hardware if damage occurs</li>
-                            <li>Regularly check and monitor the local system network</li>
-                            <li>Configure the local network if additional features are needed</li>
-                            <li>Monitoring CCTV, Server and ensuring everithing is running well and carrying out regular backups</li>
-                            <li>Management of network infrastructure and usage limits according to the needs of each user</li>
-                            <li>Educate users regarding computer equipment and maintenance</li>
-                        </ul>
-                    </div>
-                </div>
-    </section>
-
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Portfolio</h2>
-            
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <div class="portfolio-item">
-                        <img src="/api/placeholder/400/300" alt="Project 1" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>E-commerce Website</h4>
-                                <p>HTML, CSS, JavaScript, PHP</p>
-                                <a href="#" class="btn btn-primary btn-sm">Detail</a>
+                        <div class="timeline-header">
+                            <img src="assets/images/company-logo2.jpg" alt="Logo Tarumajaya Hospital" class="company-logo">
+                            <div>
+                                <h3>IT Staff</h3>
+                                <span>Tarumajaya Hospital</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="portfolio-item">
-                        <img src="/api/placeholder/400/300" alt="Project 2" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>Dashboard Admin</h4>
-                                <p>React, Bootstrap, Chart.js</p>
-                                <a href="#" class="btn btn-primary btn-sm">Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-item">
-                        <img src="/api/placeholder/400/300" alt="Project 3" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>Mobile App UI</h4>
-                                <p>Figma, Adobe XD</p>
-                                <a href="#" class="btn btn-primary btn-sm">Detail</a>
-                            </div>
-                        </div>
+                        <p>Ensure all computer devices and applications can be used properly and are connected to the network, including printers, scanners, and other supporting devices; repair or replace hardware if damaged; routinely check and monitor the local network, configure additional features as needed; monitor CCTV and servers to keep them running optimally, and perform regular backups; manage network infrastructure and usage restrictions according to user needs; and provide education to users regarding the maintenance and use of computer devices.</p>
+                        <a href="https://www.tarumajayahospital.com" target="_blank" class="btn-icon">
+                            Visit Website <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-outline-primary">View All Project</a>
+        </section>
+
+    <!--  <section id="about" class="container">...</section>
+        <section id="skills" class="container">...</section>
+        <section id="experience" class="container">...</section>
+        <section id="certificates" class="container">...</section>
+        <section id="projects" class="container">...</section>
+    -->
+
+        <section id="tech-stack" class="container">
+            <h2 class="section-title reveal">Tech & Tools</h2>
+            <div class="tech-stack-grid">
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/aws.png" alt="AWS"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/d365.png" alt="D365"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/docker.png" alt="Docker"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/microtik.png" alt="Mikrotik"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/prtg.png" alt="PRTG"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/proxmox.png" alt="Proxmox"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/tv.png" alt="TeamViewer"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/n8n.png" alt="n8n"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/zabbix.png" alt="Zabbix"><span></span></div>
+                <div class="tech-item reveal" data-magnetic><img src="assets/images/unifi.png" alt="Ubiquiti"><span></span></div>
+            </div>
+        </section>
+
+        <section id="certificates" class="container">
+    <h2 class="section-title reveal">Certificate</h2>
+    <div class="certificate-carousel">
+        <div class="certificate-track">
+            <div class="certificate-card">
+                <img src="assets/images/certificate/ IT SUPPORT BY GOOGLE_page-0001.jpg" alt="">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/certificate/1.png" alt="">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/certificate/2.png" alt="">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/certificate/3.png" alt="">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/certificate/5.png" alt="">
+            </div>
+
+            <div class="certificate-card">
+                <img src="assets/images/certificate/6.png" alt="">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/certificate/7.png" alt="">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/certificate/4.png" alt="">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/sertifikat-cisco.png" alt="Sertifikat Cisco CCNA">
+            </div>
+            <div class="certificate-card">
+                <img src="assets/images/sertifikat-lpi.png" alt="Sertifikat LPI Linux Essentials">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Certificates</h2>
-            
-            <div class="table-responsive" data-aos="fade-up">
-                <table class="table table-striped">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Certificates Name</th>
-                            <th>Institution</th>
-                            <th>Years</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Optimizing Network Performance</td>
-                            <td>ID-Networkers</td>
-                            <td>2025</td>
-                            <td><span class="badge bg-success">Valid</span></td>
-                        </tr>
-                        <tr>
-                            <td>Bug Hunting & Pentesting</td>
-                            <td>Proxis IT Group</td>
-                            <td>2025</td>
-                            <td><span class="badge bg-success">Valid</span></td>
-                        </tr>
-                        <tr>    
-                            <td>IT Security: Defense against the digital dark arts</td>
-                            <td>Google by Coursera</td>
-                            <td>2024</td>
-                            <td><span class="badge bg-success">Valid</span></td>
-                        </tr>
-                        <tr>
-                            <td>Laravel X Filament</td>
-                            <td>Dilesin Academy</td>
-                            <td>2024</td>
-                            <td><span class="badge bg-success">Valid</span></td>
-                        </tr>  
-                        <tr>
-                            <td>UI/UX Design</td>
-                            <td>Binar Academy</td>
-                            <td>2023</td>
-                            <td><span class="badge bg-success">Valid</span></td>
-                        </tr>   
-                        <tr>
-                            <td>Algorithms and Web Programming</td>
-                            <td>Fakultas Teknik Universitas Krisnadwipayana</td>
-                            <td>2023</td>
-                            <td><span class="badge bg-success">Valid</span></td>
-                        </tr>
-                        <tr>
-                            <td>Computer and Network Engineering Expertise Competency</td>
-                            <td>Yayasan Rumah Sakit Jakarta</td>
-                            <td>2019</td>
-                            <td><span class="badge bg-success">Valid</span></td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Gallery</h2>
-            <div class="gallery-container">
-                <div class="gallery-track" id="galleryTrack">
-                <img src="img/certificate/1.png" alt="img1" data-title="" data-desc="">
-                <img src="img/certificate/2.png" alt="img2" data-title="" data-desc="">
-                <img src="img/certificate/3.png" alt="img3" data-title="" data-desc="">
-                <img src="img/certificate/4.png" alt="img4" data-title="" data-desc="">
-                <img src="img/certificate/5.png" alt="img5" data-title="" data-desc="">
-                <img src="img/certificate/6.png" alt="img6" data-title="" data-desc="">
-                <img src="img/certificate/7.png" alt="img7" data-title="" data-desc="">
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <span id="modalClose" class="modal-close">&times;</span>
-                <img id="modalImage" src="" alt="Zoomed Image" />
-                <h2 id="modalTitle"></h2>
-                <p id="modalDesc"></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">Contact</h2>
-            
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <h3>Contact Information</h3>
-                    <ul class="contact-info list-unstyled">
-                        <li>
-                            <div class="d-flex">
-                                <i class="fas fa-map-marker-alt me-3 mt-1 text-primary"></i>
-                                <div>
-                                    <h5>Address</h5>
-                                    <p>Bekasi, West Java, Indonesia</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex">
-                                <i class="fas fa-envelope me-3 mt-1 text-primary"></i>
-                                <div>
-                                    <h5>Email</h5>
-                                    <p>fikrifadhilah1612@gmail.com</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex">
-                                <i class="fas fa-phone me-3 mt-1 text-primary"></i>
-                                <div>
-                                    <h5>Telepon</h5>
-                                    <p>+62 857 7728 4703</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+        <section id="projects" class="container">
+            <h2 class="section-title reveal">Project</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <img src="assets/images/n8n-logo.png" alt="n8n Automation Project">
+                    <h3>n8n Workflow Automation</h3>
+                    <p>Develop automation workflow using n8n for automatic pay slip delivery system and absence reporting to employees and related parties..</p>
+                    <a href="#" class="btn btn-secondary" target="_blank">View Details</a>
                 </div>
-                
-                <div class="col-md-6" data-aos="fade-left">
-                    <h3>Send Message</h3>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <a href="https://api.whatsapp.com/send?phone=6285777284703&text=Hallo%20Ahmad%20Fikri%20Fadhilah,%20saya%20ingin%20berbicara%20tentang%20..." class="btn btn-success">WhatsApp</a>
-                    </form>
+                <div class="project-card reveal" data-delay="200">
+                    <img src="assets/images/linux-server.png" alt="Linux Server Hardening Project">
+                    <h3>Linux Server Security</h3>
+                    <p>Hardening Linux (Ubuntu) servers to improve security, including firewall implementation, secure SSH configuration, regular system updates and patching, and server log monitoring..</p>
+                    <a href="#" class="btn btn-secondary" target="_blank">View Details</a>
+                </div>
+                <div class="project-card reveal" data-delay="400">
+                    <img src="assets/images/network-diagram.png" alt="Network Infrastructure Upgrade Project">
+                    <h3>Network Infrastructure Upgrade</h3>
+                    <p>Designing network topology and implementing infrastructure upgrades in branch offices, including replacing switches and routers with more reliable and secure devices, as well as configuring VLANs for network traffic segmentation and efficiency.</p>
+                    <a href="#" class="btn btn-secondary" target="_blank">View Details</a>
+                </div>
+                </div>
+        </section>
+
+        
+    </main>
+
+        <section id="contact" class="container">
+            <h2 class="section-title reveal">Contact</h2>
+            <p class="section-subtitle reveal">Ready to help build, develop, or optimize IT infrastructure according to business needs.</p>
+            <div class="contact-content">
+                <form id="contact-form" class="reveal" data-delay="200">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    <a href="https://wa.me/6285777284703" type="submit" class="btn">Send Messae</a>
+                </form>
+                <div class="contact-info reveal" data-delay="400">
+                    <h3>Info Kontak Lain</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fikryfadhillah15023@gmail.com">fikryfadhillah15023@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+6285777284703">+62 8577 7284 703</a></p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 Ahmad Fikri Fadhilah. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/ahmad-fikri-fadhillah-234a79186/" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Fikri1612" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com" target="_blank" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
+        
+
+    <footer>
+        <p>&copy; 2025 Ahmad Fikri Fadhilah. Create By <i class="fas fa-heart"></i> dan <i class="fas fa-coffee"></i>.</p>
     </footer>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     
-    <!-- AOS Animation Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-    <script>const darkToggle = document.getElementById("darkToggle");
-    darkToggle.addEventListener("change", () => {
-    document.body.classList.toggle("dark-mode");
-    });
-    </script>
-    
+    <button id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.4.0/tsparticles.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
