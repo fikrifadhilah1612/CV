@@ -177,11 +177,11 @@ if (cursorDot && cursorOutline) {
     // 4. Interactive Terminal (Fungsi-fungsinya)
     const commands = {
         help: `Command Available:
-- <span style="color:#00A1FF;">whoami</span>     : Menampilkan bio singkat.
-- <span style="color:#00A1FF;">skills</span>     : Menampilkan daftar keahlian teknis.
-- <span style="color:#00A1FF;">projects</span>   : Menampilkan beberapa proyek unggulan.
-- <span style="color:#00A1FF;">contact</span>    : Menampilkan cara menghubungi saya.
-- <span style="color:#00A1FF;">clear</span>      : Membersihkan terminal.`,
+- <span style="color:#00A1FF;">whoami</span>     : Display short bio.
+- <span style="color:#00A1FF;">skills</span>     : Displays a list of technical skills
+- <span style="color:#00A1FF;">projects</span>   : Showcasing some of the featured projects.
+- <span style="color:#00A1FF;">contact</span>    : Shows how to contact me.
+- <span style="color:#00A1FF;">clear</span>      : Cleaning the terminal.`,
         whoami: "I am Ahmad Fikri Fadhilah, a System Administrator and ICT Support with a passion for efficient automation and infrastructure. I like to solve problems and make the system run better.",
         skills: "Main expertise: Linux & Windows Server, Network (Cisco, Microtic), Virtualization (VMware, Proxmox), Cloud (AWS, Azure), Scripting (Bash, PowerShell), and Automation (Ansible, n8n).",
         projects: "Some important projects: Migration of physical servers to virtual, implementation of pfSense firewalls, and development of automation workflows with n8n. Type 'scroll up' to see more details on this page.",
@@ -239,41 +239,39 @@ if (cursorDot && cursorOutline) {
     }
 
    
-    // 5. FUNGSI MUSIK LATAR (VERSI SCROLL-TRIGGER)
+    // --- FUNGSI MUSIK LATAR (VERSI FINAL - KLIK UNTUK MEMULAI) ---
+
     const audio = document.getElementById('background-audio');
     const muteBtn = document.getElementById('mute-btn');
+
+    // Periksa apakah elemen audio dan tombolnya ada
     if (audio && muteBtn) {
         const muteIcon = muteBtn.querySelector('i');
-        let isMusicPlaying = false;
+        let isMusicInitialized = false; // Penanda apakah musik sudah pernah dimulai
 
-        const startMusic = () => {
-            if (!isMusicPlaying) {
-                audio.volume = 0.3;
-                let playPromise = audio.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        console.error("Gagal memulai audio:", error);
-                    });
-                }
-                isMusicPlaying = true;
-            }
-        };
-
-        window.addEventListener('scroll', startMusic, { once: true });
-
+        // Awalnya, audio di-mute oleh JavaScript
+        audio.muted = true;
+        
         muteBtn.addEventListener('click', () => {
-            if (!isMusicPlaying) {
-                startMusic();
-            }
-            audio.muted = !audio.muted;
-            if (audio.muted) {
-                muteIcon.classList.remove('fa-volume-high');
-                muteIcon.classList.add('fa-volume-xmark');
-            } else {
-                muteIcon.classList.remove('fa-volume-xmark');
-                muteIcon.classList.add('fa-volume-high');
-            }
-        });
+        // Jika ini adalah klik pertama kali, mulai musiknya
+        if (!isMusicInitialized) {
+            audio.volume = 0.3;
+            audio.play().catch(error => console.error("Gagal memulai audio:", error));
+            isMusicInitialized = true;
+        }
+
+        // Toggle status mute
+        audio.muted = !audio.muted;
+
+        // Ganti ikon berdasarkan status mute
+        if (audio.muted) {
+            muteIcon.classList.remove('fa-volume-high');
+            muteIcon.classList.add('fa-volume-xmark');
+        } else {
+            muteIcon.classList.remove('fa-volume-xmark');
+            muteIcon.classList.add('fa-volume-high');
+        }
+    });
     }
 
 });
