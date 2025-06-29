@@ -238,44 +238,40 @@ if (cursorDot && cursorOutline) {
         });
     }
 
-// --- FUNGSI MUSIK LATAR ---
+   
+    // 5. FUNGSI MUSIK LATAR (VERSI SCROLL-TRIGGER)
     const audio = document.getElementById('background-audio');
     const muteBtn = document.getElementById('mute-btn');
-    const muteIcon = muteBtn.querySelector('i');
+    if (audio && muteBtn) {
+        const muteIcon = muteBtn.querySelector('i');
+        let isMusicPlaying = false;
 
-    // Coba putar audio saat halaman dimuat
-    if (audio) {
-        // Atur volume awal (0.0 - 1.0)
-        audio.volume = 0.3; 
+        const startMusic = () => {
+            if (!isMusicPlaying) {
+                audio.volume = 0.3;
+                let playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.error("Gagal memulai audio:", error);
+                    });
+                }
+                isMusicPlaying = true;
+            }
+        };
 
-        // play() mengembalikan sebuah Promise
-        let playPromise = audio.play();
+        window.addEventListener('scroll', startMusic, { once: true });
 
-        if (playPromise !== undefined) {
-            playPromise.then(_ => {
-                // Autoplay berhasil! Tidak perlu melakukan apa-apa.
-                console.log("Audio autoplay dimulai.");
-            }).catch(error => {
-                // Autoplay diblokir oleh browser.
-                console.log("Audio autoplay diblokir. Menunggu interaksi pengguna.");
-                // Ikon akan tetap 'volume-high' untuk mengundang klik pertama.
-            });
-        }
-    }
-
-    // Tambahkan event listener untuk tombol mute/unmute
-    if (muteBtn) {
         muteBtn.addEventListener('click', () => {
-            // Toggle properti 'muted' pada audio
+            if (!isMusicPlaying) {
+                startMusic();
+            }
             audio.muted = !audio.muted;
-
-            // Ganti ikon berdasarkan status muted
             if (audio.muted) {
                 muteIcon.classList.remove('fa-volume-high');
-                muteIcon.classList.add('fa-volume-xmark'); // Ikon mute
+                muteIcon.classList.add('fa-volume-xmark');
             } else {
                 muteIcon.classList.remove('fa-volume-xmark');
-                muteIcon.classList.add('fa-volume-high'); // Ikon suara aktif
+                muteIcon.classList.add('fa-volume-high');
             }
         });
     }
