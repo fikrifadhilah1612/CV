@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function() {
 
     // --- Efek yang Sudah Ada ---
@@ -308,3 +309,10 @@ if (cursorDot && cursorOutline) {
     }
 
 });
+=======
+// Inisialisasi AOS animation
+AOS.init({
+  duration: 800,
+  once: true
+});
+>>>>>>> 17de959979c2b0192124fa1ce6a2841bd4b0f274
