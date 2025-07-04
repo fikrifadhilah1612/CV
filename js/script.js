@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const typingElement = document.querySelector('.typing-effect');
     if (typingElement) {
-        const roles = ["ICT Support", "System Administrator", "Automation Enthusiast", "Problem Solver", "Network Engineering"];
+        const roles = ["ICT Service Operation", "Web Developer", "System Administrator"];
         let roleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -277,6 +277,33 @@ if (cursorDot && cursorOutline) {
                 muteIcon.classList.remove('fa-volume-xmark');
                 muteIcon.classList.add('fa-volume-high'); // Ikon suara aktif
             }
+        });
+    }
+    
+    
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+        // 2. Ambil nilai dari input nama dan pesan
+            const name = document.getElementById('form-name').value;
+            const message = document.getElementById('form-message').value;
+
+        // 3. Ganti dengan nomor WhatsApp Anda (format 62, tanpa '+', '0', atau spasi)
+            const phoneNumber = '6285777284703'; // <<< GANTI DENGAN NOMOR ANDA
+
+        // 4. Buat template pesan sesuai permintaan
+            const template = `Halo Fikri, I am ${name} wanting to discuss about: ${message}`;
+
+        // 5. Encode pesan agar aman untuk digunakan di dalam URL
+            const encodedMessage = encodeURIComponent(template);
+
+        // 6. Gabungkan menjadi URL WhatsApp yang lengkap
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        // 7. Buka URL di tab baru
+            window.open(whatsappURL, '_blank');
         });
     }
 

@@ -155,6 +155,27 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+nav a.logo {
+    display: flex;
+    align-items: center; /* Membuat gambar dan teks sejajar secara vertikal */
+    gap: 12px; /* Memberi jarak antara gambar logo dan teks nama */
+    text-decoration: none; /* Memastikan tidak ada garis bawah */
+    color: var(--text-color); /* Mengambil warna teks dari variabel tema */
+}
+
+/* Mengatur ukuran gambar logo */
+.logo-img {
+    height: 40px; /* Sesuaikan tinggi logo ini sesuai kebutuhan Anda */
+    width: auto;  /* Biarkan lebar otomatis agar proporsinya tidak rusak */
+}
+
+/* Mengatur gaya teks di sebelah logo (opsional) */
+.logo-text {
+    font-size: 1.5rem; /* Sesuaikan ukuran font nama */
+    font-weight: 700;
+}
+
+
 /* Theme Switcher */
 .theme-switcher {
     display: flex;
@@ -529,10 +550,12 @@ footer .fa-coffee { color: #8a6d2f; }
 .certificate-carousel {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Menyembunyikan item di luar container */
-    /* Memberi efek fade di sisi kiri dan kanan */
+    overflow: hidden;
+    
+    /* INI ADALAH KUNCI PERBAIKANNYA */
+    /* Pastikan ada 'transparent' di awal dan di akhir gradasi */
     -webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
-    mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, white 80%, white 20%, transparent);
 }
 
 .certificate-track {
@@ -554,7 +577,7 @@ footer .fa-coffee { color: #8a6d2f; }
     }
     to {
         /* Geser ke kiri sejauh setengah lebar track (lebar set asli) */
-        transform: translateX(calc(-340px * 5));
+        transform: translateX(calc(-340px * 10));
     }
 }
 
